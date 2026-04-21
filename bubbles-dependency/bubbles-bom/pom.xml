@@ -14,7 +14,19 @@
         Bubbles Bom - 纯依赖版本管理模块
     </description>
 
-    <dependencyManagement>
+    <properties>
+        <jackson.version>3.1.2</jackson.version>
+    </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>tools.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 </project>
