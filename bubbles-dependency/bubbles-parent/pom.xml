@@ -15,7 +15,7 @@
     <artifactId>bubbles-parent</artifactId>
     <packaging>pom</packaging>
 
-    <name>bubbles-bom</name>
+    <name>${project.artifactId}</name>
     <description>
         Bubbles Parent - 父POM管理模块
     </description>
