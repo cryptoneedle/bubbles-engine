@@ -33,6 +33,11 @@
                 <artifactId>bubbles-common</artifactId>
                 <version>4.0.6.2</version>
             </dependency>
+            <dependency>
+                <groupId>com.bubbles.engine</groupId>
+                <artifactId>bubbles-common-core</artifactId>
+                <version>4.0.6.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

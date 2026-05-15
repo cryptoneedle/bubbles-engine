@@ -50,5 +50,4 @@ public class CustomJavaTimeModule extends SimpleModule {
         // Duration 反序列化
         this.addDeserializer(Duration.class, DurationDeserializer.INSTANCE);
     }
-    
 }
