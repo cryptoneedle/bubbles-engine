@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.bubbles.engine</groupId>
         <artifactId>bubbles-parent</artifactId>
-        <version>4.0.5.2</version>
+        <version>4.0.6.2</version>
         <relativePath>../bubbles-dependency/bubbles-parent/pom.xml</relativePath>
     </parent>
 
@@ -21,7 +21,6 @@
 
     <modules>
         <module>bubbles-common-core</module>
-        <module>bubbles-common-json</module>
     </modules>
 
     <dependencies>

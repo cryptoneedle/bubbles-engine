@@ -1,6 +1,7 @@
-package com.bubbles.common.json;
+package com.bubbles.common.test.json;
 
 import cn.hutool.v7.core.reflect.ClassUtil;
+import com.bubbles.common.json.JacksonUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

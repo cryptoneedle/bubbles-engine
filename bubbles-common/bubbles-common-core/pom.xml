@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.bubbles.engine</groupId>
         <artifactId>bubbles-common</artifactId>
-        <version>4.0.5.2</version>
+        <version>4.0.6.2</version>
     </parent>
 
     <artifactId>bubbles-common-core</artifactId>
@@ -18,5 +18,104 @@
     </description>
 
     <dependencies>
+        <!--
+            Jackson 数据绑定 (Data Binding)
+            提供 ObjectMapper 高级 API，实现 Java 对象与 JSON 字符串/流之间的互相转换（序列化与反序列化）。
+            全面支持 Jackson 注解（如 @JsonProperty、@JsonFormat、@JsonIgnore 等），是业务开发最常用的模块。
+        -->
+        <dependency>
+            <groupId>tools.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!--
+            Jackson 3.x 已内置 java.time 类型支持（JSR-310），无需单独引入依赖
+        -->
+        <!--
+            Google Guava 类型支持
+            为 Guava 库中的常用类型提供序列化与反序列化支持，
+            包括 ImmutableList、ImmutableMap、ImmutableSet、Optional、Multimap、Range 等。
+            便于在项目中直接使用 Guava 集合类型进行 JSON 交互。
+        -->
+        <dependency>
+            <groupId>tools.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-guava</artifactId>
+        </dependency>
+        <!--
+            Hibernate 7.x ORM 类型支持
+            安全地序列化 Hibernate 懒加载代理（HibernateProxy）和持久化集合（PersistentCollection），
+            避免在序列化时触发不必要的 SQL 查询或产生异常。
+            适用于与 Hibernate 7.x 集成的场景。
+        -->
+        <dependency>
+            <groupId>tools.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-hibernate7</artifactId>
+        </dependency>
+
+        <!--
+            YAML 数据格式支持
+            基于 Jackson 的 YAML 解析与生成模块，提供对 YAML 1.1/1.2 格式的读写能力。
+            常用于配置文件（如 application.yml）的解析与动态生成。
+        -->
+        <dependency>
+            <groupId>tools.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+        </dependency>
+        <!--
+            Java Properties 数据格式支持
+            支持将 Properties 文件（key=value 格式）映射为 JSON 树或 Java 对象，
+            并支持层级结构（通过点号分隔的 key）的解析与生成。
+        -->
+        <dependency>
+            <groupId>tools.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-properties</artifactId>
+        </dependency>
+        <!--
+            XML 数据格式支持
+            提供基于 Jackson 的 XML 数据绑定能力，支持 XML 与 Java 对象之间的互相转换。
+            兼容 Jakarta XML Binding（JAXB）风格注解（如 @XmlRootElement、@XmlElement 等）。
+        -->
+        <dependency>
+            <groupId>tools.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+        <!--
+            CSV 数据格式支持
+            提供对 CSV（Comma-Separated Values，逗号分隔值）格式的读写支持。
+            支持 Schema 定义、标题行、引号规则等 CSV 特性，适用于数据导入导出场景。
+        -->
+        <dependency>
+            <groupId>tools.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-csv</artifactId>
+        </dependency>
+        <!--
+            CBOR 二进制数据格式支持
+            CBOR（Concise Binary Object Representation，RFC 7049）是一种紧凑的二进制数据序列化格式。
+            相比 JSON 体积更小、解析更快，适用于对性能和带宽敏感的场景（如 IoT、消息队列）。
+        -->
+        <dependency>
+            <groupId>tools.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-cbor</artifactId>
+        </dependency>
+        <!--
+            Smile 二进制 JSON 格式支持
+            Smile 是 Jackson 原生的二进制 JSON 格式，具有与 JSON 完全兼容的数据模型，
+            但在体积和解析速度上优于文本 JSON，适用于内部服务间的高性能数据交换。
+        -->
+        <dependency>
+            <groupId>tools.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-smile</artifactId>
+        </dependency>
+
+        <!--
+            Blackbird 高性能反射优化模块
+            基于 Java MethodHandle 实现的高性能反射替代方案，
+            在序列化/反序列化过程中动态生成访问器，显著提升处理速度并降低反射开销。
+            作为 jackson-module-afterburner 的现代替代，兼容 Java 11+。
+        -->
+        <dependency>
+            <groupId>tools.jackson.module</groupId>
+            <artifactId>jackson-module-blackbird</artifactId>
+        </dependency>
     </dependencies>
 </project>

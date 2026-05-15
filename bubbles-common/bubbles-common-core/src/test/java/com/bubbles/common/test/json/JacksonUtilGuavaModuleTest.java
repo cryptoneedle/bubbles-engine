@@ -1,5 +1,6 @@
-package com.bubbles.common.json;
+package com.bubbles.common.test.json;
 
+import com.bubbles.common.json.JacksonUtil;
 import com.google.common.collect.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

@@ -1,6 +1,7 @@
-package com.bubbles.common.json;
+package com.bubbles.common.test.json;
 
-import com.bubbles.common.json.model.SampleUser;
+import com.bubbles.common.json.JacksonUtil;
+import com.bubbles.common.test.json.model.SampleUser;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

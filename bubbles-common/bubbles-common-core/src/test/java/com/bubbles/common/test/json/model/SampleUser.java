@@ -1,4 +1,4 @@
-package com.bubbles.common.json.model;
+package com.bubbles.common.test.json.model;
 
 import java.io.Serial;
 import java.io.Serializable;

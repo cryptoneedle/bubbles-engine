@@ -1,6 +1,5 @@
 package com.bubbles.common.json;
 
-import cn.hutool.v7.core.date.format.DatePattern;
 import tools.jackson.core.json.PackageVersion;
 import tools.jackson.databind.ext.javatime.deser.*;
 import tools.jackson.databind.ext.javatime.ser.*;
