@@ -1,0 +1,2 @@
+com.bubbles.common.autoconfigure.FeedbackAutoConfiguration
+com.bubbles.common.autoconfigure.JacksonAutoConfiguration

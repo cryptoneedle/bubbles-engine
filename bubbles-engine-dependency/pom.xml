@@ -4,21 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bubbles.engine</groupId>
-    <artifactId>bubbles-engine</artifactId>
-    <version>4.0.6.2</version>
+    <parent>
+        <groupId>com.bubbles.engine</groupId>
+        <artifactId>bubbles-engine</artifactId>
+        <version>4.0.6.2</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>bubbles-engine-dependency</artifactId>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
     <description>
-        Bubbles Engine - 开发引擎
+        Bubbles Engine Dependency - 依赖版本管理模块
     </description>
 
     <modules>
-        <module>bubbles-engine-dependency</module>
-        <module>bubbles-engine-common</module>
-        <module>bubbles-engine-web</module>
-        <module>bubbles-engine-cache</module>
-        <module>bubbles-engine-data</module>
+        <module>bubbles-engine-bom</module>
+        <module>bubbles-engine-parent</module>
     </modules>
 </project>
